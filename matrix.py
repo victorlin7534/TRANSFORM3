@@ -22,18 +22,21 @@ def make_scale( x, y, z ):
     return m
 
 def make_rotX( theta ):
+    theta = math.radians(theta)
     m = new_matrix()
     ident(m)
     m[1][1], m[1][2], m[2][1], m[2][2] = math.cos(theta),math.sin(theta),-math.sin(theta),math.cos(theta)
     return m
 
 def make_rotY( theta ):
+    theta = math.radians(theta)
     m = new_matrix()
     ident(m)
     m[0][0], m[0][2], m[2][0], m[2][2] = math.cos(theta),-math.sin(theta),math.sin(theta),math.cos(theta)
     return m
 
 def make_rotZ( theta ):
+    theta = math.radians(theta)
     m = new_matrix()
     ident(m)
     m[0][0], m[0][1], m[1][0], m[1][1] = math.cos(theta),math.sin(theta),-math.sin(theta),math.cos(theta)
